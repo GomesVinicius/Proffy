@@ -1,0 +1,40 @@
+POST http://localhost:3333/classes
+content-type: application/json
+
+{
+    "name": "Vinícius",
+    "avatar": "https://i.pinimg.com/736x/c2/09/d2/c209d2bdc47c1eea10a5a5a4ba1eb7f1--funny-faces-hawks.jpg",
+    "whatsapp": "387777777",
+    "bio": "Biografando biografias de biográfos",
+    "subject": "Religião",
+    "cost": 10,
+    "schedule": [
+        { "week_day": 1, "from": "8:00", "to":"10:00" },
+        { "week_day": 2, "from": "1:00", "to":"18:00" },
+        { "week_day": 3, "from": "10:00", "to":"12:00" },
+        { "week_day": 4, "from": "11:00", "to":"13:00" },
+        { "week_day": 5, "from": "12:00", "to":"14:00" }
+    ]
+}
+
+###
+
+GET http://localhost:3333/classes
+    ?week_day=1
+    &subject=Religião
+    &time=9:00
+
+
+###
+
+POST http://localhost:3333/connections
+content-type: application/json
+
+{
+    "user_id": 1
+}
+
+
+###
+
+GET http://localhost:3333/connections
