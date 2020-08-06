@@ -20,9 +20,9 @@ content-type: application/json
 ###
 
 GET http://localhost:3333/classes
-    ?week_day=1
-    &subject=Religião
-    &time=9:00
+    ?week_day=6
+    &subject=Matemática
+    &time=18:00
 
 
 ###
