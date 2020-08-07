@@ -2,18 +2,18 @@ POST http://localhost:3333/classes
 content-type: application/json
 
 {
-    "name": "Vinícius",
-    "avatar": "https://i.pinimg.com/736x/c2/09/d2/c209d2bdc47c1eea10a5a5a4ba1eb7f1--funny-faces-hawks.jpg",
-    "whatsapp": "387777777",
-    "bio": "Biografando biografias de biográfos",
+    "name": "Gomes",
+    "avatar": "https://avatars0.githubusercontent.com/u/40321477?s=460&u=46c06fde645ce124e446b99e6acda08664f66550&v=4",
+    "whatsapp": "55341999999",
+    "bio": "Él cabrón mas fascinado por religion del velho-oeste",
     "subject": "Religião",
-    "cost": 10,
+    "cost": 80,
     "schedule": [
-        { "week_day": 1, "from": "8:00", "to":"10:00" },
-        { "week_day": 2, "from": "1:00", "to":"18:00" },
-        { "week_day": 3, "from": "10:00", "to":"12:00" },
-        { "week_day": 4, "from": "11:00", "to":"13:00" },
-        { "week_day": 5, "from": "12:00", "to":"14:00" }
+        { "week_day": 1, "from": "8:00", "to":"18:00" },
+        { "week_day": 2, "from": "8:00", "to":"18:00" },
+        { "week_day": 3, "from": "8:00", "to":"18:00" },
+        { "week_day": 4, "from": "8:00", "to":"18:00" },
+        { "week_day": 5, "from": "8:00", "to":"18:00" }
     ]
 }
 

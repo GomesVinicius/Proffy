@@ -94,7 +94,7 @@ function TeacherForm() {
                         <Input
                             name="WhatsApp"
                             type="whatsapp"
-                            label="Horário"
+                            label="WhatsApp"
                             value={whatsapp}
                             onChange={(e) => { setWhatsapp(e.target.value) }}
                         />
