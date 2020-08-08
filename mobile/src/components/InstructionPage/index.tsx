@@ -1,28 +1,37 @@
 import React from 'react';
-import { View, ImageBackground, Text, Image } from 'react-native';
-import { FontAwesome } from '@expo/vector-icons'
+import { FontAwesome } from '@expo/vector-icons';
+import { View, ImageBackground, Text, Image, ImageProps } from 'react-native';
 
-import giveClassesBackground from '../../assets/images/give-classes-background.png';
-import studyIcon from '../../assets/images/icons/study.png';
 import backIcon from '../../assets/images/icons/back.png';
+import giveClassesBackground from '../../assets/images/give-classes-background.png';
 
 import styles from './styles';
+import { BorderlessButton } from 'react-native-gesture-handler';
 
-function InstructionPage() {
+interface InstructionPageProps {
+    backgroundColor: string;
+    icon: ImageProps;
+    numberPage: string;
+    subtitle: string;
+    colorIndex: string;
+    clickIcon: Function;
+}
+
+const InstructionPage:React.FC<InstructionPageProps> = ({ icon, numberPage, subtitle, colorIndex, backgroundColor, clickIcon }) => {
     return (
         <View style={styles.container}>
-            <View style={styles.top}>
+            <View style={[styles.top, { backgroundColor: backgroundColor }]}>
                 <ImageBackground
                     source={giveClassesBackground}
                     resizeMode="center"
                     style={styles.imageBackground}
                 >
-                    <Image source={studyIcon} style={styles.image} />
+                    <Image source={icon} style={styles.image} />
                 </ImageBackground>
             </View>
             <View style={styles.bottom}>
-                <Text style={styles.numberTitle}>01.</Text>
-                <Text style={styles.subtitle}>Encontre vários{'\n'}professores para{'\n'}ensinar você.</Text>
+                <Text style={styles.numberTitle}>{numberPage}</Text>
+                <Text style={styles.subtitle}>{subtitle}</Text>
     
                 <View style={styles.footer}>
                     <View style={styles.squareArea}>
@@ -30,7 +39,7 @@ function InstructionPage() {
                             name="square"
                             color="#8257E5"
                             size={4}
-                            style={[{ marginRight: 8}]}
+                            style={[{ marginRight: 8 }]}
                         />
                         <FontAwesome
                             name="square"
@@ -38,7 +47,9 @@ function InstructionPage() {
                             size={4}
                         />
                     </View>
-                    <Image source={backIcon} style={styles.icon} />
+                    <BorderlessButton onPress={clickIcon}>
+                        <Image source={backIcon} style={styles.icon} />
+                    </BorderlessButton>
                 </View>
             </View>
         </View>

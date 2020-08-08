@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#000',
     },
     top: {
-        backgroundColor: '#8257e5',
         width: '100%',
         height: '45%'
     },
