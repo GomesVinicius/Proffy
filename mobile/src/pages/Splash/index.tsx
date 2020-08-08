@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, ImageBackground, Text, Image } from 'react-native';
 
-import giveClassesBackground from '../../assets/images/give-classes-background.png';
 import logo from '../../assets/images/logo.png';
+import giveClassesBackground from '../../assets/images/give-classes-background.png';
 
 import styles from './styles';
 
-function Introduction() {
+function Splash() {
     return (
         <View style={styles.container}>
             <ImageBackground resizeMode="cover" source={giveClassesBackground} style={styles.imageBackground}>
@@ -17,4 +17,4 @@ function Introduction() {
     )
 }
 
-export default Introduction;
+export default Splash;
