@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -13,21 +13,16 @@ const { Navigator, Screen } = createStackNavigator();
 
 function AppStack() {
     //const isFirstOpen = AsyncStorage.getItem('firstOpen') ? true : false;
-
-    /*async function isFirstOpen() {
-        const isFirstOpen = String(AsyncStorage.getItem('firstOpen'))
-        return await isFirstOpen ? true : false;
-    }*/
+    const [isFirstOpen, setFirstOpen] = useState(false);
 
     return (
         <NavigationContainer>
             <Navigator screenOptions={{ headerShown: false }}>
-                <Screen name="PageInstructionFirst" component={PageInstructionFirst} />
-                <Screen name="Landing" component={Landing} />
-
-                <Screen name="PageInstructionSecond" component={PageInstructionSecond} />
-                <Screen name="GiveClasses" component={GiveClasses} />
-                <Screen name="Study" component={StudyTabs} />
+                    <Screen name="PageInstructionFirst" component={PageInstructionFirst} />
+                    <Screen name="Landing" component={Landing} />            
+                    <Screen name="PageInstructionSecond" component={PageInstructionSecond} />
+                    <Screen name="GiveClasses" component={GiveClasses} />
+                    <Screen name="Study" component={StudyTabs} />
             </Navigator>
         </NavigationContainer>
     );

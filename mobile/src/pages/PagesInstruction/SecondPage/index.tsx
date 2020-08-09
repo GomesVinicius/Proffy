@@ -9,17 +9,18 @@ import giveClassesIcon from '../../../assets/images/icons/give-classes.png';
 function PageInstructionSecond() {
     const navigator = useNavigation();
 
-    async function handleToAppStack() {
-        let teste = await AsyncStorage.getItem('firstOpen').then(() => {
-            console.log('1',teste);
-        })
+    async function storeData() {
+        try {
+            await AsyncStorage.setItem(
+                'firstOpen2',
+                'true'
+            );
+            console.log('ok');
+        } catch (err) {
+            console.log(err);
+        }
 
-        await AsyncStorage.setItem('firstOpen', 'true');
         navigator.navigate('Landing');
-        
-        let teste2 = await AsyncStorage.getItem('firstOpen').then((resp) => {
-            console.log('1', teste2);
-        });
     }
 
     return (
@@ -29,7 +30,7 @@ function PageInstructionSecond() {
             numberPage="02."
             subtitle={`Ou dê aulas\nsobre o que você\nmais conhece`}
             colorIndex="#8257E5"
-            clickIcon={handleToAppStack}
+            clickIcon={storeData}
         />
     )
 
