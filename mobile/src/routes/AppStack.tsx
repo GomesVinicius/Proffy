@@ -12,17 +12,17 @@ import AsyncStorage from '@react-native-community/async-storage';
 const { Navigator, Screen } = createStackNavigator();
 
 function AppStack() {
-    const isFirstOpen = AsyncStorage.getItem('firstOpen') ? true : false;
+    //const isFirstOpen = AsyncStorage.getItem('firstOpen') ? true : false;
 
-    console.log(AsyncStorage.getItem('firstOpen'));
+    /*async function isFirstOpen() {
+        const isFirstOpen = String(AsyncStorage.getItem('firstOpen'))
+        return await isFirstOpen ? true : false;
+    }*/
 
     return (
         <NavigationContainer>
             <Navigator screenOptions={{ headerShown: false }}>
-                {isFirstOpen
-                    ? <Screen name="PageInstructionFirst" component={PageInstructionFirst} />
-                    : null
-                }
+                <Screen name="PageInstructionFirst" component={PageInstructionFirst} />
                 <Screen name="Landing" component={Landing} />
 
                 <Screen name="PageInstructionSecond" component={PageInstructionSecond} />

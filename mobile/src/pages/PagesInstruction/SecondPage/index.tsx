@@ -10,9 +10,16 @@ function PageInstructionSecond() {
     const navigator = useNavigation();
 
     async function handleToAppStack() {
-        console.log(AsyncStorage.getItem('firstOpen'));
+        let teste = await AsyncStorage.getItem('firstOpen').then(() => {
+            console.log('1',teste);
+        })
+
         await AsyncStorage.setItem('firstOpen', 'true');
         navigator.navigate('Landing');
+        
+        let teste2 = await AsyncStorage.getItem('firstOpen').then((resp) => {
+            console.log('1', teste2);
+        });
     }
 
     return (
