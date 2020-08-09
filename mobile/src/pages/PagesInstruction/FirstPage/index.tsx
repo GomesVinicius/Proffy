@@ -11,23 +11,19 @@ function PageInstructionFirst() {
     const navigation = useNavigation();
     const [isFirstOpen, setFirstOpen] = useState(false);
 
-
     async function getData() {
         try {
-            const value = await AsyncStorage.getItem('firstOpen2');
+            const value = await AsyncStorage.getItem('firstOpen');
 
             if (value !== null) {
                 setFirstOpen(false);
-                console.log(isFirstOpen)
                 navigation.navigate('Landing');
                 return;
             }
-            console.log(value)
             setFirstOpen(true);
 
         } catch (err) {
             setFirstOpen(false);
-            console.log(isFirstOpen)
             return;
         }
     }

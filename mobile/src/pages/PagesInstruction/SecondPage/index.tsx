@@ -12,7 +12,7 @@ function PageInstructionSecond() {
     async function storeData() {
         try {
             await AsyncStorage.setItem(
-                'firstOpen2',
+                'firstOpen',
                 'true'
             );
             console.log('ok');
