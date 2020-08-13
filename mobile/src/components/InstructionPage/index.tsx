@@ -17,7 +17,7 @@ interface InstructionPageProps {
     clickIcon: Function;
 }
 
-const InstructionPage:React.FC<InstructionPageProps> = ({ icon, numberPage, subtitle, colorIndex, backgroundColor, clickIcon }) => {
+const InstructionPage: React.FC<InstructionPageProps> = ({ icon, numberPage, subtitle, colorIndex, backgroundColor, clickIcon }) => {
     return (
         <View style={styles.container}>
             <View style={[styles.top, { backgroundColor: backgroundColor }]}>
@@ -32,7 +32,7 @@ const InstructionPage:React.FC<InstructionPageProps> = ({ icon, numberPage, subt
             <View style={styles.bottom}>
                 <Text style={styles.numberTitle}>{numberPage}</Text>
                 <Text style={styles.subtitle}>{subtitle}</Text>
-    
+
                 <View style={styles.footer}>
                     <View style={styles.squareArea}>
                         <FontAwesome

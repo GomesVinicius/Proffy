@@ -75,6 +75,14 @@ const styles = StyleSheet.create({
         height: 64,
         width: '100%',
     },
+    passwordContainer: {
+        flexDirection: 'row',
+    },
+    iconEye: {
+        position: 'absolute',
+        alignSelf: 'center',
+        right: 10
+    },
     textHelp: {
         fontFamily: 'Poppins_400Regular',
         fontSize: 12,
@@ -83,7 +91,6 @@ const styles = StyleSheet.create({
     },
     checkButton: {
         marginBottom: 10,
-        border: 8
     },
     button: {
         backgroundColor: '#DCDCE5',
